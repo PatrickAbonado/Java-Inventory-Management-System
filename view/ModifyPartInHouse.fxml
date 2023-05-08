@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartInHouseController">
+    <children>
+        <AnchorPane layoutX="60.0" layoutY="12.0" prefHeight="375.0" prefWidth="475.0">
+            <children>
+                <Label layoutX="40.0" layoutY="85.0" text="ID" />
+                <Label layoutX="40.0" layoutY="121.0" text="Name" />
+                <Label layoutX="40.0" layoutY="159.0" text="Inventory" />
+                <Label layoutX="40.0" layoutY="194.0" text="Price/Cost" />
+                <Label layoutX="40.0" layoutY="231.0" prefHeight="18.0" prefWidth="22.0" text="Max" />
+                <Label fx:id="inOrOutLabel" layoutX="40.0" layoutY="269.0" text="Machine ID" />
+                <RadioButton fx:id="modifyPartInHouseInHouse" layoutX="136.0" layoutY="34.0" mnemonicParsing="false" onAction="#onModifyPartInHouseInHouseClick" prefHeight="18.0" prefWidth="74.0" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="onInOrOut" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="modifyPartInHouseOutsourced" layoutX="232.0" layoutY="34.0" mnemonicParsing="false" onAction="#onModifyPartInHouseOutsourcedClick" prefHeight="18.0" prefWidth="96.0" text="Outsourced" toggleGroup="$onInOrOut" />
+                <Label layoutX="286.0" layoutY="231.0" prefHeight="18.0" prefWidth="21.0" text="Min" />
+                <TextField fx:id="modifyPartInHouseInventoryText" layoutX="136.0" layoutY="155.0" prefHeight="18.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartInHouseIDText" editable="false" layoutX="136.0" layoutY="80.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartInHousePriceText" layoutX="136.0" layoutY="190.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartInHouseNameText" layoutX="136.0" layoutY="116.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartInHouseMinText" layoutX="322.0" layoutY="227.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartInHouseMaxText" layoutX="136.0" layoutY="227.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartInHouseMachineIdText" layoutX="136.0" layoutY="264.0" prefHeight="26.0" prefWidth="96.0" />
+                <Label layoutX="40.0" layoutY="35.0" text="Modify Part" />
+                <Button fx:id="modifyPartInHouseSave" layoutX="322.0" layoutY="316.0" mnemonicParsing="false" onAction="#onModifyPartInHouseSaveClick" text="Save" />
+                <Button fx:id="modifyPartInHouseCancel" layoutX="392.0" layoutY="316.0" mnemonicParsing="false" onAction="#onModifyPartInHouseCancelClick" text="Cancel" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

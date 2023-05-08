@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <AnchorPane layoutX="60.0" layoutY="12.0" prefHeight="375.0" prefWidth="475.0">
+         <children>
+            <Label layoutX="40.0" layoutY="85.0" text="ID" />
+            <Label layoutX="40.0" layoutY="121.0" text="Name" />
+            <Label layoutX="40.0" layoutY="159.0" text="Inventory" />
+            <Label layoutX="40.0" layoutY="194.0" text="Price/Cost" />
+            <Label layoutX="40.0" layoutY="231.0" prefHeight="18.0" prefWidth="22.0" text="Max" />
+            <Label fx:id="addPartId" layoutX="40.0" layoutY="269.0" text="Select In/Out" />
+            <RadioButton fx:id="addPartInHouseInHouse" layoutX="136.0" layoutY="34.0" mnemonicParsing="false" onAction="#onAddPartInHouseInHouseClick" prefHeight="18.0" prefWidth="80.0" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="inHouseToggle" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="addPartInHouseOutsourced" layoutX="232.0" layoutY="34.0" mnemonicParsing="false" onAction="#onAddPartInHouseOutsourcedClick" prefHeight="18.0" prefWidth="90.0" text="Outsourced" toggleGroup="$inHouseToggle" />
+            <Label layoutX="286.0" layoutY="231.0" prefHeight="18.0" prefWidth="21.0" text="Min" />
+            <TextField fx:id="addPartInHouseInventoryText" layoutX="136.0" layoutY="155.0" prefHeight="18.0" prefWidth="96.0" />
+            <TextField fx:id="addPartInHouseIDText" editable="false" layoutX="136.0" layoutY="80.0" prefHeight="26.0" prefWidth="96.0" promptText="Auto" />
+            <TextField fx:id="addPartInHousePriceText" layoutX="136.0" layoutY="190.0" prefHeight="26.0" prefWidth="96.0" />
+            <TextField fx:id="addPartInHouseNameText" layoutX="136.0" layoutY="116.0" prefHeight="26.0" prefWidth="96.0" />
+            <TextField fx:id="addPartInHouseMinText" layoutX="322.0" layoutY="227.0" prefHeight="26.0" prefWidth="96.0" />
+            <TextField fx:id="addPartIdText" layoutX="136.0" layoutY="264.0" prefHeight="26.0" prefWidth="96.0" />
+            <TextField fx:id="addPartInHouseMaxText" layoutX="136.0" layoutY="227.0" prefHeight="26.0" prefWidth="96.0" />
+            <Label fx:id="addPartLabel" layoutX="40.0" layoutY="35.0" text="Add Part" />
+            <Button fx:id="addPartInHouseSave" layoutX="322.0" layoutY="316.0" mnemonicParsing="false" onAction="#onAddPartInHouseSaveClick" text="Save" />
+            <Button fx:id="addPartInHouseCancel" layoutX="392.0" layoutY="316.0" mnemonicParsing="false" onAction="#onAddPartInHouseCancelClick" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

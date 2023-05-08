@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartOutsourcedController">
+    <children>
+        <AnchorPane layoutX="60.0" layoutY="12.0" prefHeight="375.0" prefWidth="475.0">
+            <children>
+                <Label layoutX="40.0" layoutY="85.0" text="ID" />
+                <Label layoutX="40.0" layoutY="121.0" text="Name" />
+                <Label layoutX="40.0" layoutY="159.0" text="Inventory" />
+                <Label layoutX="40.0" layoutY="194.0" text="Price/Cost" />
+                <Label layoutX="40.0" layoutY="231.0" prefHeight="18.0" prefWidth="22.0" text="Max" />
+                <Label fx:id="forInOutLabel" layoutX="40.0" layoutY="269.0" text="Company Name" />
+                <RadioButton fx:id="modifyPartOutsourcedInHouse" layoutX="139.0" layoutY="35.0" mnemonicParsing="false" onAction="#onModifyPartOutsourcedInHouseClick" prefHeight="18.0" prefWidth="62.0" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="modPartOutTog" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="modifyPartOutsourcedOutsourced" layoutX="228.0" layoutY="35.0" mnemonicParsing="false" onAction="#onModifyPartOutsourcedOutsourcedClick" prefHeight="18.0" prefWidth="80.0" selected="true" text="Outsourced" toggleGroup="$modPartOutTog" />
+                <Label layoutX="246.0" layoutY="231.0" prefHeight="18.0" prefWidth="21.0" text="Min" />
+                <TextField fx:id="modifyPartOutsourcedInventoryText" layoutX="136.0" layoutY="155.0" prefHeight="18.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartOutsourcedIDText" editable="false" layoutX="136.0" layoutY="80.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartOutsourcedPriceText" layoutX="136.0" layoutY="190.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartOutsourcedNameText" layoutX="136.0" layoutY="116.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartOutsourcedMinText" layoutX="274.0" layoutY="227.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartOutsourcedCompanyNameText" layoutX="136.0" layoutY="264.0" prefHeight="26.0" prefWidth="96.0" />
+                <TextField fx:id="modifyPartOutsourcedMaxText" layoutX="136.0" layoutY="227.0" prefHeight="26.0" prefWidth="96.0" />
+                <Label layoutX="40.0" layoutY="35.0" text="Modify Part" />
+                <Button fx:id="modifyPartOutsourcedSave" layoutX="274.0" layoutY="316.0" mnemonicParsing="false" onAction="#onModifyPartOutsourcedSaveClick" text="Save" />
+                <Button fx:id="modifyPartOutsourcedCancel" layoutX="336.0" layoutY="316.0" mnemonicParsing="false" onAction="#onModifyPartOutsourcedCancelClick" text="Cancel" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
